@@ -4,6 +4,7 @@ import org.hamcrest.core.Is;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
+import com.guess.test.PlayingGame;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -14,10 +15,8 @@ public class GuessNumberTest {
     @Test
 
     public void should_remove_subscriber_when_close()  {
-        int a = 2;
-        int b = 3;
 
-        assertThat(MyMath.add(a, b), is(5));
+        assertThat(MyMath.add(2, 3), is(5));
     }
 
     @Test
@@ -28,11 +27,25 @@ public class GuessNumberTest {
     }
 
     @Test
-    public void should_be_0A4B_when_input_equal_numbers(){
+    public void should_be_4A0B_when_input_equal_numbers(){
         assertThat(NumGame.get_result_of_comparing_two_numbers(2345,2345),is("4A0B"));
     }
 
-
-
-
+    @Test
+    public void should_be_1A0B_when_input_having_one_equal_digit_numbers(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(2456,2980),is("1A0B"));
+    }
+    @Test
+    public void output_0A4B(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(1234,4321),is("0A4B"));
+    }
+    @Test
+    public void output_2A2B(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(1245,1254),is("2A2B"));
+    }
+    @Test
+    public void output_0A0B(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(2345,6789),is("0A0B"));
+    }
 }
+
