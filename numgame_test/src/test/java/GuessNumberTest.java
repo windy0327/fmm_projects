@@ -47,5 +47,13 @@ public class GuessNumberTest {
     public void output_0A0B(){
         assertThat(NumGame.get_result_of_comparing_two_numbers(2345,6789),is("0A0B"));
     }
+    @Test
+    public void output_1A3B(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(5555,5432),is("1A3B"));
+    }
+    @Test
+    public void output_4A12B(){
+        assertThat(NumGame.get_result_of_comparing_two_numbers(6666,6666),is("4A12B"));
+    }
 }
 
