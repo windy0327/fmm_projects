@@ -3,12 +3,13 @@ package com.guess.test;
 public class NumGame
 {
     public static Integer randomNum=0;
+
     public static void getRandomNum()
     {
         randomNum = (int) (Math.random()*9000+1000);
     }
 
-    public static String get_result_of_comparing_two_numbers(Integer a,Integer b)
+    public static String getGameResult(Integer a,Integer b)
     {
         int how_many_A=0;
         int how_many_B=0;
@@ -27,6 +28,7 @@ public class NumGame
                 }
             }
         }
+
         return how_many_A+"A"+how_many_B+"B";
     }
 
@@ -45,7 +47,7 @@ public class NumGame
                 e.printStackTrace();
             }
 
-            System.out.println(NumGame.get_result_of_comparing_two_numbers(inputNum, num));
+            System.out.println(NumGame.getGameResult(inputNum, num));
 
             if(num==inputNum)
             {
