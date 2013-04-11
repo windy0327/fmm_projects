@@ -14,5 +14,6 @@ public class PlayingGame
       NumGame numGame=new NumGame();
       numGame.getRandomNum();
       numGame.playGame(numGame.randomNum);
+    }
 }
 
