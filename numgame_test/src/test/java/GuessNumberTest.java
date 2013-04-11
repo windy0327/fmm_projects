@@ -13,10 +13,9 @@ import static org.hamcrest.core.Is.is;
 public class GuessNumberTest {
 
     @Test
-    public  void should_be_four_digits_num(){
-        Integer m=2356;
-        assertThat(NumGame.create_four_digits_random_num().toString().length(),is(4));
-
+    public void should_be_four_digits_num(){
+        NumGame.getRandomNum();
+        assertThat(randomNum.toString().length(),is(4));
     }
 
     @Test

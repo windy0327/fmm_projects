@@ -2,16 +2,10 @@ package com.guess.test;
 
 public class NumGame
 {
-    public static Integer  create_four_digits_random_num()
+    public static Integer randomNum=0;
+    public static void getRandomNum()
     {
-        int random_num = (int) (Math.random()*9000+1000);
-        return random_num;
-    }
-
-    public static Integer get_random_num_created()
-    {
-        int produced_four_digits_num= NumGame.create_four_digits_random_num();
-        return produced_four_digits_num;
+        randomNum = (int) (Math.random()*9000+1000);
     }
 
     public static String get_result_of_comparing_two_numbers(Integer a,Integer b)
