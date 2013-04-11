@@ -19,6 +19,11 @@ public class GuessNumberTest {
     }
 
     @Test
+    public void function_of_playGame_should_be_passed(){
+        NumGame.playGame(2456);
+    }
+
+    @Test
     public void should_be_4A0B_when_input_equal_numbers(){
         assertThat(NumGame.get_result_of_comparing_two_numbers(2345,2345),is("4A0B"));
     }
