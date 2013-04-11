@@ -38,16 +38,7 @@ public class NumGame
         {
             System.out.println("请输入一个四位数：");
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            Integer inputNum = null;
-            try
-            {
-                inputNum = Integer.parseInt(reader.readLine());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            System.out.println(NumGame.getGameResult(inputNum, num));
+            Integer inputNum = inputNum();
 
             if(num==inputNum)
             {
@@ -57,6 +48,18 @@ public class NumGame
         }
 
         System.out.println("Game over!");
+    }
+
+    public static Integer inputNum() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Integer inputNum = null;
+        try
+        {
+            inputNum = Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return inputNum;
     }
 
 }
