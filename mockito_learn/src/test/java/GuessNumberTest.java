@@ -1,4 +1,4 @@
-import com.guess.test.MyMath;
+
 import com.guess.test.NumGame;
 import org.hamcrest.core.Is;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class GuessNumberTest {
     @Test
     public void should_be_four_digits_num(){
         NumGame.getRandomNum();
-        assertThat(randomNum.toString().length(),is(4));
+        assertThat(NumGame.randomNum.toString().length(),is(4));
     }
 
     @Test

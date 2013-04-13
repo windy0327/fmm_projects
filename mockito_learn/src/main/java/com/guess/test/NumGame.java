@@ -1,5 +1,9 @@
 package com.guess.test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class NumGame
 {
     public static Integer randomNum=0;
@@ -39,6 +43,8 @@ public class NumGame
             System.out.println("请输入一个四位数：");
 
             Integer inputNum = inputNum();
+
+            System.out.println(NumGame.getGameResult(inputNum, num));
 
             if(num==inputNum)
             {
