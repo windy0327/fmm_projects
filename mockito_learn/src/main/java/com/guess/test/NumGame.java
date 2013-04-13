@@ -67,4 +67,7 @@ public class NumGame
         }
         return inputNum;
     }
+
+    public static void playGame2(int i, BufferedReader reader) {
+    }
 }

@@ -10,8 +10,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 import static com.guess.test.NumGame.inputNum;
+import static com.guess.test.NumGame.playGame2;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -27,7 +29,14 @@ public class GuessNumberTest {
     public void should_be_num_when_input() throws IOException {
         BufferedReader reader= Mockito.mock(BufferedReader.class);
         when(reader.readLine()).thenReturn("3");
-        assertThat(NumGame.inputNum(reader),is(3));
+        assertThat(NumGame.inputNum(reader), is(3));
+    }
+
+    @Test
+    public void should_output_Congratulations() throws IOException {
+        BufferedReader reader=Mockito.mock(BufferedReader.class);
+        when(reader.readLine()).thenReturn("6789");
+        verify(System.out).println("Congratulations!");
     }
 
     @Test
