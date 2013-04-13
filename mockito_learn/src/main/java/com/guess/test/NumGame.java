@@ -36,13 +36,13 @@ public class NumGame
         return how_many_A+"A"+how_many_B+"B";
     }
 
-    public static void playGame(Integer num)
+    public static void playGame(Integer num,BufferedReader reader)
     {
         for(int i=0;i<6;i++)
         {
             System.out.println("请输入一个四位数：");
 
-            Integer inputNum = inputNum();
+            Integer inputNum = inputNum(reader);
 
             System.out.println(NumGame.getGameResult(inputNum, num));
 
@@ -56,16 +56,15 @@ public class NumGame
         System.out.println("Game over!");
     }
 
-    public static Integer inputNum() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static Integer inputNum(BufferedReader reader) {
         Integer inputNum = null;
         try
         {
+
             inputNum = Integer.parseInt(reader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return inputNum;
     }
-
 }

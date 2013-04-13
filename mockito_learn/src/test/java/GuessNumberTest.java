@@ -1,13 +1,18 @@
 
 import com.guess.test.NumGame;
-import org.hamcrest.core.Is;
+import org.hamcrest.Matcher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-import com.guess.test.PlayingGame;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+
+import static com.guess.test.NumGame.inputNum;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GuessNumberTest {
@@ -16,6 +21,13 @@ public class GuessNumberTest {
     public void should_be_four_digits_num(){
         NumGame.getRandomNum();
         assertThat(NumGame.randomNum.toString().length(),is(4));
+    }
+
+    @Test
+    public void should_be_num_when_input() throws IOException {
+        BufferedReader reader= Mockito.mock(BufferedReader.class);
+        when(reader.readLine()).thenReturn("3");
+        assertThat(NumGame.inputNum(reader),is(3));
     }
 
     @Test

@@ -12,8 +12,9 @@ public class PlayingGame
     public static void main(String args[]) throws IOException
     {
       NumGame numGame=new NumGame();
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
       numGame.getRandomNum();
-      numGame.playGame(numGame.randomNum);
+      numGame.playGame(numGame.randomNum,reader);
     }
 }
 
