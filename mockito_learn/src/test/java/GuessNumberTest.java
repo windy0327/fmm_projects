@@ -8,11 +8,15 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
 
 import static com.guess.test.NumGame.inputNum;
+import static com.guess.test.NumGame.playGame;
 import static com.guess.test.NumGame.playGame2;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -35,9 +39,13 @@ public class GuessNumberTest {
     @Test
     public void should_output_Congratulations() throws IOException {
         BufferedReader reader=Mockito.mock(BufferedReader.class);
+        PrintStream  mockOut=Mockito.mock(PrintStream.class);
         when(reader.readLine()).thenReturn("6789");
-        verify(System.out).println("Congratulations!");
+        playGame2(6789, reader,mockOut);
+        verify(mockOut).println("Congratulations!");
     }
+
+
 
     @Test
     public void should_be_4A0B_when_input_equal_numbers(){

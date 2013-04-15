@@ -1,12 +1,11 @@
 package com.guess.test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class NumGame
 {
     public static Integer randomNum=0;
+
 
     public static void getRandomNum()
     {
@@ -68,6 +67,14 @@ public class NumGame
         return inputNum;
     }
 
-    public static void playGame2(int i, BufferedReader reader) {
+    public static void playGame2(int num, BufferedReader reader,PrintStream mockOut) {
+        Integer inputNum = inputNum(reader);
+
+        mockOut.println(NumGame.getGameResult(inputNum, num));
+        if(num==inputNum)
+        {
+            mockOut.println("Congratulations!");
+
+        }
     }
 }
