@@ -35,26 +35,6 @@ public class NumGame
         return how_many_A+"A"+how_many_B+"B";
     }
 
-    public static void playGame(Integer num,BufferedReader reader)
-    {
-        for(int i=0;i<6;i++)
-        {
-            System.out.println("请输入一个四位数：");
-
-            Integer inputNum = inputNum(reader);
-
-            System.out.println(NumGame.getGameResult(inputNum, num));
-
-            if(num==inputNum)
-            {
-                System.out.println("Congratulations!");
-                break;
-            }
-        }
-
-        System.out.println("Game over!");
-    }
-
     public static Integer inputNum(BufferedReader reader) {
         Integer inputNum = null;
         try
@@ -67,13 +47,37 @@ public class NumGame
         return inputNum;
     }
 
-    public static void playGame2(int num, BufferedReader reader,PrintStream mockOut) {
-        Integer inputNum = inputNum(reader);
+    public static void playGame(Integer num, BufferedReader reader, PrintStream mockOut) {
 
-        mockOut.println(NumGame.getGameResult(inputNum, num));
-        if(num==inputNum)
+        for(int i=0;i<6;i++)
         {
-            mockOut.println("Congratulations!");
+            mockOut.println("请输入一个四位数：");
+
+            Integer inputNum = inputNum(reader);
+
+            mockOut.println(NumGame.getGameResult(inputNum, num));
+
+            if(inputNum.intValue()==num.intValue())
+           {
+              mockOut.println("Congratulations!");
+              break;
+           }
+        }
+        mockOut.println("Game over!");
+    }
+
+    public static void makeDigitsDifferent() {
+        NumGame.getRandomNum();
+        String randomNumStr=randomNum.toString();
+        int j=0;
+        boolean isDifferent=false;
+        for(int i=0;!isDifferent;i++){
+            if(randomNumStr.charAt(j)!=randomNumStr.charAt(j+1)&&randomNumStr.charAt(j+1)!=randomNumStr.charAt(j+2)&&randomNumStr.charAt(j+2)!=randomNumStr.charAt(j+3)){
+                isDifferent=true;
+            }
+            else {
+                NumGame.getRandomNum();
+            }
 
         }
     }

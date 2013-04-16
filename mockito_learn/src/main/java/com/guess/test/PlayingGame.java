@@ -1,10 +1,7 @@
 package com.guess.test;
 import com.guess.test.NumGame;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.lang.System;
 
 public class PlayingGame
@@ -13,8 +10,8 @@ public class PlayingGame
     {
       NumGame numGame=new NumGame();
       BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-      numGame.getRandomNum();
-      numGame.playGame(numGame.randomNum,reader);
+      numGame.makeDigitsDifferent();
+      numGame.playGame(numGame.randomNum,reader,System.out);
     }
 }
 
