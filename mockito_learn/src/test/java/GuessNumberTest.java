@@ -85,7 +85,6 @@ public class GuessNumberTest {
         verify(mockOut, times(1)).println("请输入一个四位数：");
         verify(mockOut, times(1)).println("4A0B");
         verify(mockOut, times(1)).println("Congratulations!");
-        verify(mockOut, times(1)).println("Game over!");
     }
 
     @Test
@@ -96,19 +95,8 @@ public class GuessNumberTest {
         when(reader.readLine()).thenReturn("6789");
         playGame(6123, reader, mockOut);
 
-        verify(mockOut, times(6)).println("1A0B");
+        verify(mockOut, times(1)).println("1A0B");
+        verify(mockOut,times(1)).clear();
     }
-
-    @Test
-    public void should_print_Game_over() throws IOException {
-        BufferedReader reader = Mockito.mock(BufferedReader.class);
-        PrintStream mockOut = Mockito.mock(PrintStream.class);
-
-        when(reader.readLine()).thenReturn("1234");
-        playGame(1567, reader, mockOut);
-
-        verify(mockOut, times(1)).println("Game over!");
-    }
-
 }
 

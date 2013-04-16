@@ -41,10 +41,11 @@ public class NumGame {
 
     public static void playGame(Integer num, BufferedReader reader, PrintStream mockOut) {
 
+        Integer inputNum = null;
         for (int i = 0; i < 6; i++) {
             mockOut.println("请输入一个四位数：");
 
-            Integer inputNum = inputNum(reader);
+            inputNum = inputNum(reader);
             mockOut.println(NumGame.getGameResult(inputNum, num));
 
             if (inputNum.intValue() == num.intValue()) {
@@ -52,8 +53,10 @@ public class NumGame {
                 break;
             }
         }
+        if (inputNum.intValue() != num.intValue()) {
+            mockOut.println("Game over!");
+        }
 
-        mockOut.println("Game over!");
     }
 
     public static void makeDigitsDifferent() {
