@@ -66,16 +66,16 @@
       <file leaf-file-name="PlayingGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guess/test/PlayingGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="44" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+            <state line="14" column="26" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumGame.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NumGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guess/test/NumGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="50" selection-start="1408" selection-end="1408" vertical-scroll-proportion="-0.28808865">
+            <state line="14" column="28" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuessNumberTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GuessNumberTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/GuessNumberTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="30" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-0.56417114">
               <folding />
             </state>
           </provider>
@@ -110,9 +110,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guess/test/NumGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/guess/test/PlayingGame.java" />
         <option value="$PROJECT_DIR$/src/test/java/GuessNumberTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/guess/test/NumGame.java" />
       </list>
     </option>
   </component>
@@ -620,19 +620,23 @@
         <state line="61" column="43" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GuessNumberTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guess/test/NumGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="30" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0" />
+        <state line="14" column="28" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/guess/test/PlayingGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="44" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" />
+        <state line="14" column="26" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/guess/test/NumGame.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/GuessNumberTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="50" selection-start="1408" selection-end="1408" vertical-scroll-proportion="-0.28808865">
+        <state line="42" column="0" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-0.56417114">
           <folding />
         </state>
       </provider>
