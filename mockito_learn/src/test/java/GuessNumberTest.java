@@ -82,7 +82,6 @@ public class GuessNumberTest {
         when(reader.readLine()).thenReturn("6789");
         playGame(6789, reader, mockOut);
 
-        verify(mockOut, times(1)).println("请输入一个四位数：");
         verify(mockOut, times(1)).println("4A0B");
         verify(mockOut, times(1)).println("Congratulations!");
     }
@@ -95,9 +94,8 @@ public class GuessNumberTest {
         when(reader.readLine()).thenReturn("6789");
         playGame(6123, reader, mockOut);
 
-        verify(mockOut, times(6)).println("1A0B");
-       // verify()
-       // verify(mockOut,times(1)).clear();
+        verify(mockOut, times(1)).println("1A0B");
+
     }
 }
 
