@@ -32,4 +32,9 @@ public class GameTipsTest {
         assertThat(NumGame.getGameResult(5555, 5432), is("1A3B"));
     }
 
+    @Test
+    public void should_get_right_tips_when_input_all_digits_are_right_but_1_digit_not_fixed() {
+        assertThat(NumGame.getGameResult(1245, 1241), is("3A1B"));
+    }
+
 }
