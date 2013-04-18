@@ -10,6 +10,7 @@ import static org.hamcrest.core.Is.is;
 import static org.mockito.Mockito.when;
 
 public class InputTest {
+
     @Test
     public void should_can_input_num_from_keyboard() throws IOException {
         BufferedReader reader = Mockito.mock(BufferedReader.class);

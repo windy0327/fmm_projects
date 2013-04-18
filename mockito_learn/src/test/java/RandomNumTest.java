@@ -5,6 +5,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class RandomNumTest {
+
     @Test
     public void should_be_four_digits_num() {
         NumGame.getRandomNum();

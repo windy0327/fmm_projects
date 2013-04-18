@@ -11,6 +11,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class GameProcessTest {
+
     @Test
     public void should_print_right_when_input_equal_numbers() throws IOException {
         BufferedReader reader = Mockito.mock(BufferedReader.class);

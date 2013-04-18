@@ -5,6 +5,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class GameTipsTest {
+
     @Test
     public void should_win_game_when_input_right_number() {
         assertThat(NumGame.getGameResult(2345, 2345), is("4A0B"));
