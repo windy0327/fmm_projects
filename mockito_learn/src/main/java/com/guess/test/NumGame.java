@@ -11,21 +11,21 @@ public class NumGame {
     }
 
     public static String getGameResult(Integer inputNum, Integer randomNum) {
-        int how_many_A = 0;
-        int how_many_B = 0;
+        int howManyA = 0;
+        int howManyB = 0;
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if (inputNum.toString().charAt(i) == randomNum.toString().charAt(j) && i == j) {
-                    how_many_A++;
+                    howManyA++;
                 }
                 if (inputNum.toString().charAt(i) == randomNum.toString().charAt(j) && i != j) {
-                    how_many_B++;
+                    howManyB++;
                 }
             }
         }
 
-        return how_many_A + "A" + how_many_B + "B";
+        return howManyA + "A" + howManyB + "B";
     }
 
     public static Integer inputNum(BufferedReader reader) {
