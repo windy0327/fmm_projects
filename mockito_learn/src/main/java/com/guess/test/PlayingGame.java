@@ -13,11 +13,9 @@ public class PlayingGame {
 
         numGame.makeDigitsDifferent();
 
-        for (int i = 0; i < 6; i++) {
-            numGame.playGame(numGame.randomNum, reader, System.out);
-        }
 
-        System.out.println("Game over!");
+         numGame.playGame(numGame.randomNum, reader, System.out);
+
     }
 }
 
