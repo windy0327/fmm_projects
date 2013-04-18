@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 public class GuessNumberTest {
 
     @Test
-    public void should_be_num_when_input() throws IOException {
+    public void should_can_input_num_from_keyboard() throws IOException {
         BufferedReader reader = Mockito.mock(BufferedReader.class);
         when(reader.readLine()).thenReturn("3");
 
@@ -82,18 +82,20 @@ public class GuessNumberTest {
         when(reader.readLine()).thenReturn("6789");
         playGame(6789, reader, mockOut);
 
+        verify(mockOut).println("请输入一个四位数：");
         verify(mockOut, times(1)).println("4A0B");
         verify(mockOut, times(1)).println("Congratulations!");
     }
 
     @Test
-    public void should_print_1A0B_6_times() throws IOException {
+    public void should_print_right_when_input_num_not_equal_random_num() throws IOException {
         BufferedReader reader = Mockito.mock(BufferedReader.class);
         PrintStream mockOut = Mockito.mock(PrintStream.class);
 
         when(reader.readLine()).thenReturn("6789");
         playGame(6123, reader, mockOut);
 
+        verify(mockOut).println("请输入一个四位数：");
         verify(mockOut, times(1)).println("1A0B");
 
     }
